@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <title>Success - Accessibility training</title>
+    <meta name="view-transition" content="same-origin" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="styles/global.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="header">
+      <a href="./"><abbr title="accessibility">a11y</abbr> training</a>
+    </header>
+    <main class="main" id="main">
+      <h1 class="h1">Success</h1>
+      <p>
+        Your form was posted successfully (not really of course this is plain
+        HTML site with no logic).
+      </p>
+      <p><a class="button" href="javascript:history.go(-1);">Go back</a></p>
+    </main>
+    <footer class="footer">&copy; Phil Thompson</footer>
+    <dialog aria-labelledby="gallery-title" id="gallery">
+      <h2 id="gallery-title">Gallery for 2C</h2>
+      <button
+        aria-label="Close 2C gallery"
+        class="gallery-close"
+        data-js-hide-gallery
+        type="button"
+      >
+        x
+      </button>
+      <div class="gallery-images">
+        <figure class="gallery-images__figure">
+          <img
+            alt=""
+            class="gallery-images__image"
+            height="400"
+            loading="lazy"
+            src="https://placebear.com/360/400"
+            width="360"
+          />
+          <figcaption>Image of a bear 1</figcaption>
+        </figure>
+        <figure class="gallery-images__figure">
+          <img
+            alt=""
+            class="gallery-images__image"
+            height="300"
+            loading="lazy"
+            src="https://placebear.com/400/300"
+            width="400"
+          />
+          <figcaption>Image of a bear 2</figcaption>
+        </figure>
+        <figure class="gallery-images__figure">
+          <img
+            alt=""
+            class="gallery-images__image"
+            height="400"
+            loading="lazy"
+            src="https://placebear.com/360/400"
+            width="360"
+          />
+          <figcaption>Image of a bear 3</figcaption>
+        </figure>
+        <figure class="gallery-images__figure">
+          <img
+            alt=""
+            class="gallery-images__image"
+            height="400"
+            loading="lazy"
+            src="https://placebear.com/360/400"
+            width="360"
+          />
+          <figcaption>Image of a bear 4</figcaption>
+        </figure>
+      </div>
+    </dialog>
+    <script src="./scripts/nav.js"></script>
+    <script src="./scripts/validate-form.js"></script>
+    <script src="./scripts/gallery.js"></script>
+    <script src="./scripts/login.js"></script>
+    <script src="./scripts/tabs.js"></script>
+  </body>
+</html>

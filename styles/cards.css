@@ -1,0 +1,86 @@
+.cards {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  overflow: auto;
+}
+
+.card {
+  --color-card-background: #106dff;
+  --color-card-text: #fff;
+  --color-card-outline: var(----color-card-background);
+  background-color: var(--color-card-background);
+  color: var(--color-card-text);
+  min-width: 30rem;
+  position: relative;
+}
+
+@media (prefers-color-scheme: dark) {
+  .card {
+    --color-card-background: var(--color-body-background-grey);
+    --color-card-text: #fff;
+  }
+}
+
+.card--outline-all:focus-within {
+  outline: 2px solid --color-card-outline;
+  outline-offset: 1px;
+}
+
+.card__link {
+  color: inherit;
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* force link hit area to be 100% of card */
+.card__link::after {
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.card:hover .card__link,
+.card__link:hover {
+  text-decoration: underline;
+}
+
+.card--outline-all .button:focus-visible {
+  background-color: var(--color-body-text);
+  color: var(--color-body-background);
+  border: 1px solid transparent;
+  outline: none;
+}
+
+.card__header {
+  position: relative;
+}
+
+.card__header button {
+  bottom: 1rem;
+  position: absolute;
+  right: 1rem;
+  z-index: 1;
+}
+
+.card__body {
+  padding: 2rem;
+}
+
+.card__body * {
+  margin-block: 0;
+}
+
+.card__image {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.card .button {
+  display: inline-block;
+  margin-top: 2rem;
+}

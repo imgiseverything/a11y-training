@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <title>Completed accessible page - Accessibility training</title>
+    <meta name="view-transition" content="same-origin" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/nav.css" />
+    <link rel="stylesheet" href="styles/cards.css" />
+    <link rel="stylesheet" href="styles/gallery.css" />
+    <link rel="stylesheet" href="styles/tabs.css" />
+    <link rel="stylesheet" href="styles/form-errors.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style></style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="header">
+      <a href="./"><abbr title="accessibility">a11y</abbr> training</a>
+      <div class="header-nav">
+        <button
+          aria-controls="nav"
+          aria-expanded="false"
+          aria-label="Menu"
+          id="burger"
+          type="button"
+        >
+          <svg viewBox="0 0 100 80" width="24" height="24" fill="currentColor">
+            <rect width="100" height="20"></rect>
+            <rect y="30" width="100" height="20"></rect>
+            <rect y="60" width="100" height="20"></rect>
+          </svg>
+        </button>
+        <nav aria-labelledby="burger" class="nav" hidden id="nav">
+          <ul>
+            <li><a class="header-nav__link" href="./">Home</a></li>
+            <li>
+              <a class="header-nav__link" href="./all-errors.html">
+                All errors
+              </a>
+            </li>
+            <li>
+              <a class="header-nav__link" href="./no-landmarks.html">
+                No landmarks
+              </a>
+            </li>
+            <li>
+              <a class="header-nav__link" href="./heading-levels-missing.html">
+                Heading levels missing
+              </a>
+            </li>
+            <li>
+              <a class="header-nav__link" href="./form-errors.html">
+                Form errors
+              </a>
+            </li>
+            <li>
+              <a class="header-nav__link" href="./button-names.html">
+                Button names missing
+              </a>
+            </li>
+            <li>
+              <a
+                aria-current="page"
+                class="header-nav__link"
+                href="./complete.html"
+              >
+                Completed page
+              </a>
+            </li>
+            <li>
+              <button
+                class="link header-nav__link"
+                id="login-button"
+                type="button"
+              >
+                Log in
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <dialog id="login-dialog">
+      <button aria-label="Close" id="login-close-button" type="button">
+        X
+      </button>
+      <h2 class="h2">Log in</h2>
+      <form action="./submitted.html" method="dialog">
+        <div class="field">
+          <label class="label" for="email-login">Email</label>
+          <span class="error" id="email-login-error" hidden>
+            Email is a required field
+          </span>
+          <input
+            aria-required="true"
+            autocomplete="home email"
+            class="input"
+            id="email-login"
+            name="email"
+            type="email"
+            required
+          />
+        </div>
+        <div class="field">
+          <label class="label" for="password">Password</label>
+          <span class="error" id="password-error" hidden>
+            Password is a required field
+          </span>
+          <input
+            aria-required="true"
+            autocomplete="current-password"
+            class="input"
+            id="password"
+            name="email"
+            type="password"
+            required
+          />
+        </div>
+        <div class="field">
+          <button id="login-submit-button" type="submit">Submit</button>
+        </div>
+      </form>
+    </dialog>
+    <main class="main" class="main" id="main">
+      <h1 class="h1">Completed page</h1>
+      <p>This is our completed accessible page.</p>
+      <h2 class="h2">Cards</h2>
+      <div class="cards">
+        <div class="card card--outline-all">
+          <div class="card__header">
+            <img
+              alt=""
+              class="card__image"
+              height="400"
+              loading="lazy"
+              src="https://placebear.com/360/400"
+              width="360"
+            />
+          </div>
+          <div class="card__body">
+            <h3 class="h3"><a href="#" class="card__link">Title 2A</a></h3>
+            <p>
+              This card has 1 accessible link. So the focus style should wrap
+              the whole card.
+            </p>
+            <p>
+              <a href="#" aria-hidden="true" tabindex="-1" class="button">
+                Find out more
+              </a>
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__header">
+            <img
+              alt=""
+              class="card__image"
+              height="400"
+              loading="lazy"
+              src="https://placebear.com/360/400"
+              width="360"
+            />
+          </div>
+          <div class="card__body">
+            <h3 class="h3">Title 2B</h3>
+            <p>This card has no links. It has no focus style.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__header">
+            <img
+              alt=""
+              class="card__image"
+              height="400"
+              loading="lazy"
+              src="https://placebear.com/360/400"
+              width="360"
+            />
+            <button
+              aria-label="Gallery for Title 2C"
+              data-js-show-gallery
+              type="button"
+            >
+              Gallery
+            </button>
+          </div>
+          <div class="card__body">
+            <h3 class="h3">
+              <a class="card__link" href="/link/somewhere">Title 2C</a>
+            </h3>
+            <p>
+              This card has 2 accessible links. So the focus style should wrap
+              individual elements not the whole card.
+            </p>
+            <p>
+              <a href="#" aria-hidden="true" tabindex="-1" class="button">
+                Find out more
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="h4" id="tablist-1">Tabs</h2>
+
+      <div aria-labelledby="tablist-1" class="tablist" role="tablist">
+        <button
+          aria-selected="true"
+          aria-controls="tabpanel-1"
+          class="tab"
+          id="tab-1"
+          role="tab"
+          type="button"
+        >
+          Tab 1
+        </button>
+        <button
+          aria-selected="false"
+          aria-controls="tabpanel-2"
+          class="tab"
+          id="tab-2"
+          role="tab"
+          type="button"
+        >
+          Tab 2
+        </button>
+      </div>
+      <div
+        aria-labelledby="tab-1"
+        class="tabpanel"
+        id="tabpanel-1"
+        role="tabpanel"
+      >
+        <p>
+          Some sample content for tab 1 which contains a <a href="#">link</a>
+        </p>
+      </div>
+      <div
+        aria-labelledby="tab-2"
+        class="tabpanel"
+        hidden
+        id="tabpanel-2"
+        role="tabpanel"
+      >
+        <p>
+          Some sample content for tab 2 which also contains a
+          <a href="#">link</a>
+        </p>
+      </div>
+
+      <h2 class="h4">Contact form</h2>
+      <form action="./submitted.html" data-js-form method="post" novalidate>
+        <div class="field">
+          <label class="label" for="first-name">First name</label>
+          <span class="error" id="first-name-error" hidden>
+            First name is a required field
+          </span>
+          <input
+            aria-required="true"
+            autocomplete="given-name"
+            class="input"
+            id="first-name"
+            name="first-name"
+            type="text"
+            required
+          />
+        </div>
+        <div class="field">
+          <label class="label" for="last-name">Last name</label>
+          <span class="error" id="last-name-error" hidden>
+            Last name is a required field
+          </span>
+          <input
+            aria-required="true"
+            autocomplete="family-name"
+            class="input"
+            id="last-name"
+            name="last-name"
+            type="text"
+            required
+          />
+        </div>
+        <div class="field">
+          <label class="label" for="email">Email</label>
+          <span class="hint" id="email-hint">
+            Enter the same email you use to log-in with
+          </span>
+          <span class="error" id="email-error" hidden>
+            Email is a required field
+          </span>
+          <input
+            aria-describedby="email-hint"
+            aria-required="true"
+            autocomplete="home email"
+            class="input"
+            id="email"
+            name="email"
+            type="email"
+            required
+          />
+        </div>
+        <div class="field">
+          <button type="submit">Send</button>
+        </div>
+      </form>
+    </main>
+    <footer class="footer">&copy; Phil Thompson</footer>
+    <dialog aria-labelledby="gallery-title" id="gallery">
+      <h2 id="gallery-title">Gallery for 2C</h2>
+      <button
+        aria-label="Close 2C gallery"
+        class="gallery-close"
+        data-js-hide-gallery
+        type="button"
+      >
+        x
+      </button>
+      <div class="gallery-images">
+        <figure class="gallery-images__figure">
+          <img
+            alt=""
+            class="gallery-images__image"
+            height="400"
+            loading="lazy"
+            src="https://placebear.com/360/400"
+            width="360"
+          />
+          <figcaption>Image of a bear 1</figcaption>
+        </figure>
+        <figure class="gallery-images__figure">
+          <img
+            alt=""
+            class="gallery-images__image"
+            height="300"
+            loading="lazy"
+            src="https://placebear.com/400/300"
+            width="400"
+          />
+          <figcaption>Image of a bear 2</figcaption>
+        </figure>
+        <figure class="gallery-images__figure">
+          <img
+            alt=""
+            class="gallery-images__image"
+            height="400"
+            loading="lazy"
+            src="https://placebear.com/360/400"
+            width="360"
+          />
+          <figcaption>Image of a bear 3</figcaption>
+        </figure>
+        <figure class="gallery-images__figure">
+          <img
+            alt=""
+            class="gallery-images__image"
+            height="400"
+            loading="lazy"
+            src="https://placebear.com/360/400"
+            width="360"
+          />
+          <figcaption>Image of a bear 4</figcaption>
+        </figure>
+      </div>
+    </dialog>
+    <script src="./scripts/nav.js"></script>
+    <script src="./scripts/validate-form.js"></script>
+    <script src="./scripts/gallery.js"></script>
+    <script src="./scripts/login.js"></script>
+    <script src="./scripts/tabs.js"></script>
+  </body>
+</html>

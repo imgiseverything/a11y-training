@@ -1,0 +1,16 @@
+.tablist {
+  display: flex;
+}
+
+.tab {
+}
+
+.tab[aria-selected="true"] {
+  background: var(--color-body-background);
+  color: var(--color-body-text);
+}
+
+.tabpanel {
+  border: 1px solid;
+  padding: 1rem;
+}

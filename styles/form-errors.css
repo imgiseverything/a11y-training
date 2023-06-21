@@ -1,0 +1,20 @@
+.summary {
+  border: 2px solid var(--color-error);
+  color: var(--color-error);
+  margin-bottom: 20px;
+  padding: 5px 10px;
+}
+
+.error {
+  display: block;
+  color: var(--color-error);
+}
+
+[aria-invalid="true"] {
+  border: 2px solid var(--color-error);
+}
+
+.field:has([aria-invalid="true"]) {
+  border-inline-start: 2px solid var(--color-error);
+  padding-inline-start: 10px;
+}
