@@ -16,7 +16,7 @@ const popover = document.getElementById("nav");
  * @returns {void}
  */
 const hidePopover = () => {
-  button?.setAttribute("aria-expanded", false);
+  button?.setAttribute("aria-expanded", "false");
   popover?.setAttribute("hidden", "");
 };
 
@@ -31,7 +31,7 @@ const togglePopover = (event) => {
   const isCollapsed = popover?.getAttribute("hidden") === "";
 
   if (isCollapsed === true) {
-    button?.setAttribute("aria-expanded", true);
+    button?.setAttribute("aria-expanded", "true");
     nav?.removeAttribute("hidden");
   } else {
     hidePopover();

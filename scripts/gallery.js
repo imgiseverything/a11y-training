@@ -16,11 +16,11 @@ const dialog = document.getElementById("gallery");
 const closeButton = dialog?.querySelector("[data-js-hide-gallery]");
 
 /** "Show the dialog" button opens the <dialog> modally */
-showButton.addEventListener("click", () => {
+showButton?.addEventListener("click", () => {
   dialog.showModal();
 });
 
 /** "Close" button triggers "close" on dialog because of [formmethod="dialog"] */
-closeButton.addEventListener("click", () => {
+closeButton?.addEventListener("click", () => {
   dialog.close();
 });
