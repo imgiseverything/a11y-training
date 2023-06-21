@@ -214,22 +214,27 @@ h6 {
 
 .h1 {
   font-size: var(--font-size-h1);
+  margin-top: 2em;
 }
 
 .h2 {
   font-size: var(--font-size-h2);
+  margin-top: 2em;
 }
 
 .h3 {
   font-size: var(--font-size-h3);
+  margin-top: 2em;
 }
 
 .h4 {
   font-size: var(--font-size-h4);
+  margin-top: 2em;
 }
 
 .h5 {
   font-size: var(--font-size-h5);
+  margin-top: 2em;
 }
 
 .h6 {

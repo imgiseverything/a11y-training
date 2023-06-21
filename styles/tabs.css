@@ -1,12 +1,17 @@
 .tablist {
   display: flex;
+  gap: 1px;
 }
 
 .tab {
+  background: var(--color-body-background);
+  border: 1px solid;
+  color: var(--color-body-text-light);
+  margin-bottom: -1px;
 }
 
 .tab[aria-selected="true"] {
-  background: var(--color-body-background);
+  background: var(--color-body-background-grey);
   color: var(--color-body-text);
 }
 
